@@ -1,0 +1,95 @@
+@charset "UFT-8";
+/* configuração geral do corpo da página */
+body
+{
+    margin: 0 auto;
+    font-family: "Century Gothic",sans-serif;
+}
+header
+{
+    height: 170px;
+    background-color: #008eb6;
+}
+header img
+{
+    float: left;
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+}
+header h1
+{
+    float: left;
+    height: 50px 0 0 30px;
+    font-size: 60px;
+    color: #fff;
+}
+nav
+{
+    clear: both;
+    width: 80%;
+    margin: 0px auto;
+    height: 55px;
+}
+nav a
+{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+nav .opcao
+{
+    float: left;
+    width: 31.3%;
+    background-color: #b1ccf5;
+    padding: 10px 0;
+    margin: 0 1%;
+    font-size: 26px;
+}
+nav.opcao:hover
+{
+    background-color: #83afd3;
+}
+/* Dropdown baseado em W3Schools https:www.w3Schools.com/css/css_dropdown.asp*/
+/* Usando para posicionar o conteúdo dropdown */
+.dropdown
+{
+    position: relative;
+    display: inline-block;
+}
+/* Conteúdo dropdown(oclto por padrão)*/
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #005f89;
+     z-index: 1;
+     width: 100%;
+}
+/* Links dentro do dropdown */
+.dropdown-content a{
+    display: block;
+}
+/* Mudar cor dos links dropdown ao pasasar mouse */
+.dropdown-content a:hover{
+    background-color: #83afd3;
+}
+/* Mostrar o menu dropdown ao passar mouse */
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+/* section */
+section
+{
+    clear: both;
+    min-height: 367px;
+    width: 100%;
+    margin-top: 0px;
+}
+/* RODAPÉ */
+footer
+{
+ background-color: #005f89;
+ color: #fff;
+ text-align: center;
+ padding: 10px;
+}
