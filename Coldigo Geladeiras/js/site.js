@@ -36,10 +36,17 @@ function vaildaFaleConosco()
                     }
     return true
 }
+
 function verificarMotivo(motivo)
 {
     //capturamo a estrutura da div cujo ID é opcaoProduto na variável elemento
     var elemento = document.getElementById("opcaoProduto");
+    
+    // Limpa o conteúdo existente
+    while(elemento.firstChild) {
+        elemento.removeChild(elemento.firstChild);
+    }
+
     if(motivo == "PR")
     {
         //criamos um elemento (tag) <select> e gardamos na variável homônica
@@ -49,27 +56,29 @@ function verificarMotivo(motivo)
         //Conteúdo altual da varialve selct:
         // <select name="selproduto"></select>
         
-        //Colocamos o option como "filho" da tag select criada
-        select.appendChild(option);
+        //Criamos a opção padrão "Escolha"
+        var optionDefault = document.createElement("option");
+        optionDefault.setAttribute("value","");
+        optionDefault.appendChild(document.createTextNode("Escolha"));
+        select.appendChild(optionDefault);
         //Conteúdo atual da variálve select
-        //<select name="selproduto"><option value="">Escolhas</option></select>
+        //<select name="selproduto"><option value="">Escolha</option></select>
  
         //Criamos um Elemento (tag) <option> e gardamos na variável homônica
         var option = document.createElement("option");
         //setamos nesse novo option o atributo 'value' com o valor "FR"
         option.setAttribute("value","FR");
         //criamos um nó de texto "Freazer" e gravamos na variavel 'texto'
-        var texto = document.createTextNode("Freazer");
+        var texto = document.createTextNode("Freezer");
         //Colocamos o nó de texto críado como "filho" da tag option criada
         option.appendChild(texto);
         //Conteúdo atual da variálve option
-        //<option value="FR">Freazer</option>
+        //<option value="FR">Freezer</option>
 
         select.appendChild(option);
         //Conteúdo atual da variálve select
-
         //<select name="selproduto">
-        //<option value="">Escolhas</option><option value="FR">Freazer</option>
+        //<option value="">Escolha</option><option value="FR">Freezer</option>
         //</select>
 
         //Criamos um Elemento (tag) <option> e gardamos na variável homônica
@@ -83,30 +92,25 @@ function verificarMotivo(motivo)
         //Conteúdo atual da variálve option
         //<option value="GE">Geladeira</option>
 
-        //Colocamos o nó de texto críado como "filho" da tag option criada
+        //Colocamos o option criado como "filho" da tag select
         select.appendChild(option);
         //Conteúdo atual da variálve select
-
         //<select name="selproduto">
-        //<option value="">Escolhas</option><option value="FR">Freazer</option><option value="GE">Geladeira</option>
+        //<option value="">Escolha</option>
+        //<option value="FR">Freezer</option>
+        //<option value="GE">Geladeira</option>
         //</select>
 
-        //Colocamos o nó de texto críado como "filho" da tag option criada
+        //Colocamos o select criado como "filho" da div opcaoProduto
         elemento.appendChild(select);
-        //se o valor da variável motivo no for "PE"
-    }else{
-        //se a div possuir algum "primeiro filho"
-        if(elemento.firstChild)
-        {
-           //remove ele
-           elemento.removeChild(elemento.firstChild);
-        }
     }
 }
+
 // assim que o ducumento html for carregado por completo
 $(document).ready(function()
 {
-    $("header").load("/TrilhaJavaWeb/js folder/jQuery/Coldigo Geladeiras/pages/CABEÇALHO.html")
-    $("nav").load("/TrilhaJavaWeb/js folder/jQuery/Coldigo Geladeiras/pages/MENU.html")
-    $("footer").load("/TrilhaJavaWeb/js folder/jQuery/Coldigo Geladeiras/pages/Rodape.html")
+    // CORREÇÃO: Caminhos ajustados para a estrutura do projeto
+    $("header").load("/ProjetoTriLhaWeb/pages/general/CABEÇALHO.html")
+    $("nav").load("/ProjetoTriLhaWeb/pages/general/MENU.html")
+    $("footer").load("/ProjetoTriLhaWeb/pages/general/Rodape.html")
 });
