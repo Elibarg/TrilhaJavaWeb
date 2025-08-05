@@ -107,10 +107,9 @@ function verificarMotivo(motivo)
 }
 
 // assim que o ducumento html for carregado por completo
-$(document).ready(function()
-{
-    // CORREÇÃO: Caminhos ajustados para a estrutura do projeto
-    $("header").load("/ProjetoTriLhaWeb/pages/general/CABEÇALHO.html")
-    $("nav").load("/ProjetoTriLhaWeb/pages/general/MENU.html")
-    $("footer").load("/ProjetoTriLhaWeb/pages/general/Rodape.html")
+$(document).ready(function() {
+    // Caminhos corrigidos para Live Server
+    $("header").load("./general/CABEÇALHO.html");
+    $("nav").load("./general/MENU.html"); 
+    $("footer").load("./general/Rodape.html");
 });

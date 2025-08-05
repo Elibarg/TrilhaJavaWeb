@@ -1,4 +1,4 @@
 $(document).ready(function(){
-    $("header").load("/TrilhaJavaWeb/pages/admin/general/header.html");
-    $("footer").load("/TrilhaJavaWeb/pages/admin/general/footer.html");
+    $("header").load("pages/admin/header.html");
+    $("footer").load("pages/admin/footer.html");
 });

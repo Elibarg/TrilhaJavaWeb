@@ -47,7 +47,7 @@ nav .opcao
     margin: 0 1%;
     font-size: 26px;
 }
-nav.opcao:hover
+nav .opcao:hover
 {
     background-color: #83afd3;
 }
