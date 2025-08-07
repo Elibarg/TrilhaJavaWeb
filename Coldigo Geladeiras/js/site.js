@@ -109,7 +109,7 @@ function verificarMotivo(motivo)
 // assim que o ducumento html for carregado por completo
 $(document).ready(function() {
     // Caminhos corrigidos para Live Server
-    $("header").load("./general/CABEÇALHO.html");
-    $("nav").load("./general/MENU.html"); 
-    $("footer").load("./general/Rodape.html");
+    $("header").load("/pages/site//general/CABEÇALHO.html");
+    $("nav").load("/pages/site//general/MENU.html"); 
+    $("footer").load("/pages/site//general/Rodape.html");
 });
